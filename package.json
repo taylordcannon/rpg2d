@@ -3,12 +3,17 @@
   "version": "0.0.1",
   "description": "2-Dimensional Web RPG",
   "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "TAYLOR CANNON <taylor.d.cannon@gmail.com>",
   "license": "ISC",
-  "devDependencies": {
+
+  "scripts": 
+  {
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+
+  "devDependencies": 
+  {
     "file-loader": "^3.0.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.6",
