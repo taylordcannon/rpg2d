@@ -1,3 +1,5 @@
+import GameObject from "./gameObject";
+
 export default class Engine {
     constructor() {
     document.body.style.margin = "0px";
@@ -10,9 +12,18 @@ export default class Engine {
     this.ctx = this.canvas.getContext("2d");
     this.lastTime = new Date().getTime();
 
+    this.objs = []; //list of all game object based off of the roots
 
     window.requestAnimationFrame(this.loop.bind(this));
+    }
 
+    addObject(obj) {
+        if(obj instanceof GameObject) {
+            this.objs.push(obj);
+        }
+        else {
+            console.error("Invalid object added. Not GameObject.")
+        }
     }
 
     loop() {
