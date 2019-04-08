@@ -36,6 +36,9 @@ export default class Engine {
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
         //implement drawing here
+        this.objs.forEach(obj=>{
+            obj.draw(this.ctx);
+        })
 
         this.lastTime = time;
         window.requestAnimationFrame(this.loop.bind(this));
