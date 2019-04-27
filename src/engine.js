@@ -1,4 +1,5 @@
 import GameObject from "./gameObject";
+import Input from "./input";
 
 export default class Engine {
     constructor() {
@@ -10,9 +11,12 @@ export default class Engine {
     document.body.appendChild(this.canvas);
 
     this.ctx = this.canvas.getContext("2d");
+
     this.lastTime = new Date().getTime();
 
     this.objs = []; //list of all game object based off of the roots
+
+    this.input = new Input();
 
     window.requestAnimationFrame(this.loop.bind(this));
     }
@@ -31,6 +35,9 @@ export default class Engine {
         let dt = (time - this.lastTime) / 1000;
 
         //implement updates here
+        if (this.update) {
+            this.update(dt);
+        }
 
         this.ctx.fillStyle = "#303030";
         this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
