@@ -1,4 +1,4 @@
-import noIMG from './images/noIMG.png';
+import noIMG from '../../public/assets/images/noIMG.png';
 
 export default class Renderable {
     constructor(image = noIMG, startFrame = 0, frameCount = 0, framesX = 1, framesY = 1, speed = 1) {

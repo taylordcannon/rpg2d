@@ -1,6 +1,6 @@
 import GameObject from "./gameObject";
 import Renderable from "./renderable";
-import playerIMG from './images/player.png'
+import playerIMG from '../../public/assets/images/player.png'
 
 export default class Player extends GameObject {
     constructor(x, y){
@@ -8,8 +8,9 @@ export default class Player extends GameObject {
 
         this.position = [x, y];
 
-        this.facing = 4;
+        
 
+        this.facing = 4;
         this.renderables = [
             new Renderable(playerIMG, 18, 0, 9, 4, 10),
             new Renderable(playerIMG,  1, 7, 9, 4, 10),

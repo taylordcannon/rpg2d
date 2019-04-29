@@ -2,11 +2,12 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: './src/main.js',
+    entry: './src/client/main.js', //main client entry point to run the game
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js' //bundled up js file that contains all js info
     },
+
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,

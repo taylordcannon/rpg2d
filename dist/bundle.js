@@ -82,19 +82,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/client/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/main.js":
+/***/ "./src/client/main.js":
 /*!*********************!*\
-  !*** ./src/main.js ***!
+  !*** ./src/client/main.js ***!
   \*********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-    eval("document.body.style.margin = \"0px\";\r\ndocument.body.style.overflow = \"hidden\";\r\nlet canvas = document.createElement(\"canvas\");\r\ncanvas.width = window.innerWidth;\r\ncanvas.height = window.innerHeight;\r\ndocument.body.appendChild(canvas);\r\n\r\nlet ctx = canvas.getContext(\"2d\");\r\n\r\nwindow.requestAnimationFrame(loop);\r\n\r\nlet ball = {\r\n    position: {\r\n        x: 100,\r\n        y: 100\r\n    },\r\n    velocity: {\r\n        x: 500,\r\n        y: 500\r\n    }\r\n};\r\n\r\nlet lastTime = new Date().getTime();\r\nfunction loop() {\r\n    let time = new Date().getTime();\r\n    let dt = (time - lastTime) / 1000;\r\n\r\n    ball.position.x += ball.velocity.x * dt;\r\n    ball.position.y += ball.velocity.y * dt;\r\n\r\n    if (ball.position.x < 50)\r\n        ball.velocity.x *= -1;\r\n    if (ball.position.x > canvas.width - 50)\r\n        ball.velocity.x *= -1;\r\n    if (ball.position.y < 50)\r\n        ball.velocity.y *= -1;\r\n    if (ball.position.y > canvas.height - 50)\r\n        ball.velocity.y *= -1;\r\n\r\n    ctx.fillStyle = \"#303030\";\r\n    ctx.fillRect(0, 0, canvas.width, canvas.height);\r\n\r\n    ctx.fillStyle = \"#ff1111\";\r\n    ctx.beginPath();\r\n    ctx.arc(ball.position.x, ball.position.y, 50, 0, 2 * Math.PI);\r\n    ctx.fill();\r\n\r\n    lastTime = time;\r\n    window.requestAnimationFrame(loop);\r\n}\n\n//# sourceURL=webpack:///./src/main.js?");
+    eval("document.body.style.margin = \"0px\";\r\ndocument.body.style.overflow = \"hidden\";\r\nlet canvas = document.createElement(\"canvas\");\r\ncanvas.width = window.innerWidth;\r\ncanvas.height = window.innerHeight;\r\ndocument.body.appendChild(canvas);\r\n\r\nlet ctx = canvas.getContext(\"2d\");\r\n\r\nwindow.requestAnimationFrame(loop);\r\n\r\nlet ball = {\r\n    position: {\r\n        x: 100,\r\n        y: 100\r\n    },\r\n    velocity: {\r\n        x: 500,\r\n        y: 500\r\n    }\r\n};\r\n\r\nlet lastTime = new Date().getTime();\r\nfunction loop() {\r\n    let time = new Date().getTime();\r\n    let dt = (time - lastTime) / 1000;\r\n\r\n    ball.position.x += ball.velocity.x * dt;\r\n    ball.position.y += ball.velocity.y * dt;\r\n\r\n    if (ball.position.x < 50)\r\n        ball.velocity.x *= -1;\r\n    if (ball.position.x > canvas.width - 50)\r\n        ball.velocity.x *= -1;\r\n    if (ball.position.y < 50)\r\n        ball.velocity.y *= -1;\r\n    if (ball.position.y > canvas.height - 50)\r\n        ball.velocity.y *= -1;\r\n\r\n    ctx.fillStyle = \"#303030\";\r\n    ctx.fillRect(0, 0, canvas.width, canvas.height);\r\n\r\n    ctx.fillStyle = \"#ff1111\";\r\n    ctx.beginPath();\r\n    ctx.arc(ball.position.x, ball.position.y, 50, 0, 2 * Math.PI);\r\n    ctx.fill();\r\n\r\n    lastTime = time;\r\n    window.requestAnimationFrame(loop);\r\n}\n\n//# sourceURL=webpack:///./src/client/main.js?");
 
     /***/ })
     
