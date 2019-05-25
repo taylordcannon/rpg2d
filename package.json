@@ -2,7 +2,7 @@
   "name": "rpg2d",
   "version": "0.0.1",
   "description": "2-Dimensional Web RPG",
-  "main": "../src/client/main.js",
+  "main": "main.js",
   "author": "TAYLOR CANNON <taylor.d.cannon@gmail.com>",
   "license": "ISC",
   "scripts": {
