@@ -10,12 +10,13 @@
     "start": "webpack-dev-server"
   },
   "devDependencies": {
-    "express": "^4.16.4",
     "file-loader": "^3.0.1",
-    "socket.io": "^2.2.0",
     "url-loader": "^1.1.2",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1",
     "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "dependencies": "0.0.1"
   }
 }
